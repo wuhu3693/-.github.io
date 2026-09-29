@@ -85,7 +85,7 @@
   }
 
   /* ============ 开场（intro 期间只留 loader / 倒计时数字） ============ */
-  body.intro .head, body.intro .music-switch, body.intro .credit { opacity: 0; pointer-events: none; transform: translateY(-8px); }
+  body.intro .head, body.intro .music-switch { opacity: 0; pointer-events: none; transform: translateY(-8px); }
 
   :focus-visible { outline: 2px solid #FF5C8A; outline-offset: 3px; }
   .loader { outline: none !important; }
@@ -179,13 +179,6 @@
   .cnt { color: #B8506E; font-size: 14px; }
   .cnt b { color: #FF5C8A; font-size: 16px; }
 
-  /* ============ 版权 ============ */
-  .credit {
-    position: fixed; right: 14px; bottom: calc(env(safe-area-inset-bottom, 0px) + 8px);
-    z-index: 5; font-size: 11px; color: rgba(150, 100, 120, .8);
-    transition: opacity .6s ease;
-  }
-
   /* ============ 降级提示 ============ */
   #noWebgl {
     position: fixed; inset: 0; z-index: 20; display: none;
@@ -232,8 +225,6 @@
     <button id="relightBtn">重新点亮</button>
     <span class="cnt">蜡烛 <b id="candleCount">0</b></span>
   </div>
-
-  <div class="credit">改编自 cake-blow 项目：生日歌 Web Audio 实时合成</div>
 
   <div id="noWebgl">抱歉，当前设备不支持 WebGL，无法展示 3D 蛋糕。请换一个浏览器或设备再试。</div>
 
